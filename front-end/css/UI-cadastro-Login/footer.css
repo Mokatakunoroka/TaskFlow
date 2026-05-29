@@ -1,0 +1,15 @@
+/*Estilizando footer*/
+
+footer
+{
+    padding: 1rem 0;
+
+    background-color: black;
+    color: white;
+
+}
+
+footer p
+{
+    text-align: center;
+}

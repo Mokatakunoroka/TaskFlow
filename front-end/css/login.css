@@ -1,117 +1,4 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html
-{
-    scroll-behavior: smooth; /*Deixa a descida do <a href="#id" bem mais suave*/
-}
-
-/*Estilizando body*/
-
-body
-{
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
-
-/*Estilizando header*/
-
-header
-{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1rem 0;
-
-    background-color: black;
-
-}
-
-img
-{
-    margin-left: 20px;
-    width: 70px;
-    transition: 200ms;
-}
-
-img:hover
-{
-    transform: scale(1.1);
-    transition: 200ms;
-}
-
-ul
-{
-    display: flex;
-    flex-flow: row wrap;
-    list-style: none;
-    gap: 10px;
-    margin: 0px;
-    padding: 0px;
-}
-
-li
-{
-    margin-right: 20px;;
-}
-.info-header
-{
-    display: inline-block;
-    color: white;
-    position: relative;
-
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Linha branca */
-.info-header::after
-{
-    content: "";
-    position: absolute;
-
-    left: 0;
-    bottom: -2px;
-
-    width: 100%;
-    height: 1px;
-
-    background-color: white;
-
-    transform: scaleX(0);
-    transform-origin: left;
-
-    transition: transform 300ms ease;
-}
-
-/* Animação */
-.info-header:hover::after
-{
-    transform: scaleX(1);
-}
-
-/*Estilizando Main*/
-
-main
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-
-}
+@import url("/front-end/css/import-cadastro-login.css");
 
 /*Estilizando as informacoes*/
 
@@ -135,44 +22,9 @@ main
     margin: 25px;
 }
 
-/*Estilizando o login*/
-.card-login
-{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+/*Estilizando os botoes*/
 
-    border-left: 1px solid black;
-    padding: 2rem;
-}
-
-.input-data label
-{
-    display: block;
-    font-size: 1.2rem;
-}
-
-input
-{   
-    border: 1px solid rgb(180,180,180);
-    border-radius: 6px;
-
-    padding: 0.7rem;
-    height: 1.2rem
-}
-
-input:focus
-{
-    background-color: white;
-    border-color: black;
-
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    outline: none;
-}
-
-.btn-login
+#btn-login
 {
     padding: 0.3rem;
     background-color: rgb(255, 255, 255);
@@ -183,7 +35,7 @@ input:focus
     transition: 200ms;
 }
 
-.btn-login:hover
+#btn-login:hover
 {
     transform: translateY(-5px) scale(1.03);
     transition: 200ms;
@@ -204,19 +56,6 @@ input:focus
     padding: 10px;
 }
 
-
-#msg-erro
-{
-    display: block;
-
-    min-height: 20px;
-
-    font-family: Arial;
-    font-size: 0.9rem;
-
-    color: red;
-    
-}
 /*Estilizando sobre*/
 
 .about
@@ -241,21 +80,4 @@ input:focus
     max-width: 400px;
     width: 100%;
     padding: 1rem;
-}
-
-
-/*Estilizando footer*/
-
-footer
-{
-    padding: 1rem 0;
-
-    background-color: black;
-    color: white;
-
-}
-
-footer p
-{
-    text-align: center;
 }

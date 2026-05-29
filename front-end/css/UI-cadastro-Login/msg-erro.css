@@ -1,0 +1,12 @@
+#msg-erro
+{
+    display: block;
+
+    min-height: 20px;
+
+    font-family: Arial;
+    font-size: 0.9rem;
+
+    color: red;
+    
+}

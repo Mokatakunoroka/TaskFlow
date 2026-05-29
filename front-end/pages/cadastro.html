@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskFlow</title>
+    <link rel="icon" href="../../assets/img/Logo-TaskFlow.png">
+    <link rel="stylesheet" href="../css/cadastro.css">
 </head>
 <body>
-    
+    <header>
+        <img src="../../assets/img/Logo-TaskFlow.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="#sobre" class="info-header">Sobre</a></li>
+                <li><a href="#footer" class="info-header">Informações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form class="card">
+            <h1>Cadastro</h1>
+            <div class="input-data">
+                <label for="input-email-Cadastro">Email</label>
+                <input
+                required
+                id="input-email-Cadastro"
+                type="email">
+            </div>
+
+            <div class="input-data">
+                <label for="password">Senha</label>
+                <input
+                required
+                id="password"
+                type="password">
+            </div>
+
+            <div class="input-data">
+                <label for="confirm-password">Confirmar senha</label>
+                <input
+                required
+                id="confirm-password"
+                type="password">
+            </div>
+
+            <button type="submit" id="btn-cadastro">
+                CADASTRAR-SE
+            </button>
+
+            <p id="msg-erro"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p> &copy; 2026 - TaskFlow</p>
+    </footer>
 </body>
 </html>
