@@ -2,6 +2,12 @@
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    scroll-behavior: smooth; /*Deixa a descida do <a href="#id" bem mais suave*/
 }
 
 /*Estilizando body*/
@@ -9,7 +15,12 @@
 body
 {
     background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+
 
 /*Estilizando header*/
 
@@ -43,16 +54,25 @@ ul
 {
     display: flex;
     flex-flow: row wrap;
+    list-style: none;
     gap: 10px;
     margin: 0px;
     padding: 0px;
 }
 
+li
+{
+    margin-right: 20px;;
+}
 .info-header
 {
     display: inline-block;
     color: white;
     position: relative;
+
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Linha branca */
@@ -83,13 +103,13 @@ ul
 
 /*Estilizando Main*/
 
-Main
+main
 {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    flex: 1;
 
 }
 
@@ -101,7 +121,8 @@ Main
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+
 
     border: 1px solid black;
     border-radius: 5px;
@@ -124,7 +145,7 @@ Main
     padding: 2rem;
 }
 
-.input-data, label
+.input-data label
 {
     display: block;
     font-size: 1.2rem;
@@ -132,16 +153,19 @@ Main
 
 input
 {   
-    border: 1px solid black;
-    border-radius: 4px;
+    border: 1px solid rgb(180,180,180);
+    border-radius: 6px;
 
-    padding-left: 4px;
+    padding: 0.7rem;
     height: 1.2rem
 }
 
 input:focus
 {
-    background-color: rgb(190, 190, 190);
+    background-color: white;
+    border-color: black;
+
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
     outline: none;
 }
 
@@ -151,20 +175,22 @@ input:focus
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 4px;
+    width: 100%;
 
     transition: 200ms;
 }
 
 .btn-login:hover
 {
-    transform: translateY(-5px) scale(1.1);
+    transform: translateY(-5px) scale(1.03);
     transition: 200ms;
 
     box-shadow: 0px 0px 10px rgb(143, 143, 143);
 }
 
-a
+#cadastrar-se
 {
+    cursor: pointer;
     text-decoration: none;
 
     color: black;
@@ -175,6 +201,19 @@ a
     padding: 10px;
 }
 
+
+#msg-erro
+{
+    display: block;
+
+    min-height: 20px;
+
+    font-family: Arial;
+    font-size: 0.9rem;
+
+    color: red;
+    
+}
 /*Estilizando sobre*/
 
 .about
@@ -188,7 +227,7 @@ a
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.textos, p
+.textos p
 {
     padding-bottom: 5px;
     text-align: justify;
