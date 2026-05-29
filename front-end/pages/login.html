@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
+
     <title>TaskFlow</title>
+
+    <link rel="icon" href="../../assets/img/Logo-TaskFlow.png">
+
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <header>
@@ -39,48 +43,45 @@
                     </p>
                 </div>
            </section>
-            <form id="index.html">
 
-                <div class="card-login">
 
-                    <h1>Login</h1>
+            <form class="card-login">
 
-                    <div class="input-data">
-                        <label for="Email-login">
-                            E-mail
-                        </label>
+                <h1>Login</h1>
 
-                        <input
-                        required
-                        id="input-email"
-                        type="email"
-                        name="Email-login">
+                <div class="input-data">
+                    <label for="input-email">
+                        E-mail
+                    </label>
 
-                    </div>
+                    <input
+                    required
+                    id="input-email"
+                    type="email">
 
-                    <div class="input-data">
-                        <label for="Password-login">
-                            Senha
-                        </label>
-
-                        <input
-                        required
-                        id="input-password"
-                        type="password"
-                        name="Password-login">
-                    </div>
-
-                        <button type="submit" class="btn-login">
-                            LOGIN
-                        </button>
-                    <p>
-                        <a href="cadastro.html" id="cadastrar-se">Cadastrar-se</a>
-                    </p>
-
-                    <p id="msg-erro"></p>
                 </div>
 
+                <div class="input-data">
+                    <label for="input-password">
+                        Senha
+                    </label>
+
+                    <input
+                    required
+                    id="input-password"
+                    type="password">
+                </div>
+
+                    <button class="btn-login" id="btn-login" type="submit">
+                        LOGIN
+                    </button>
+                <p>
+                    <a href="cadastro.html" id="cadastrar-se">Cadastrar-se</a>
+                </p>
+
+                <p id="msg-erro"></p>
             </form>
+
         </div>
 
     </main>
@@ -91,6 +92,6 @@
         </p>
     </footer>
 
-    <script></script>
+    <script src="../../back-end/login/login.js" type="module"></script>
 </body>
 </html>
