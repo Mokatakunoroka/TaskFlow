@@ -1,20 +1,21 @@
-
 .informacoes
 {
     display: flex;
-    flex-direction: row;;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
 
     max-height: 900px;
 
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px solid var(--border);
+    border-radius: 8px;                    
+
+    background-color: var(--surface);  
 
     padding-left: 2px;
     padding-right: 2px;
-    box-shadow: 0px 0px 10px rgb(163, 163, 163);
+    box-shadow: 0px 10px 20px rgb(54, 89, 153);
 
     margin: 25px;
 }
@@ -27,12 +28,16 @@
     align-items: center;
     gap: 20px;
 
-    border-left: 1px solid black;
+    border-left: 1px solid var(--border);
     padding: 2rem;
+
+    background-color: var(--surface);
 }
 
 .cadastro
 {
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--surface);
+    box-shadow: 0px 10px 20px rgb(54, 89, 153);
 }

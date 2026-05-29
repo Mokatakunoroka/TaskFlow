@@ -7,6 +7,5 @@
     font-family: Arial;
     font-size: 0.9rem;
 
-    color: red;
-    
+    color: var(--danger);
 }

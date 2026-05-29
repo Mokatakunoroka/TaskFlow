@@ -2,22 +2,23 @@
 {
     display: block;
     font-size: 1.2rem;
+    color: var(--text-primary);
 }
 
 input
 {   
-    border: 1px solid rgb(180,180,180);
+    border: 1px solid var(--border);
     border-radius: 6px;
 
     padding: 0.7rem;
-    height: 1.2rem
+    height: 1.2rem;
 }
 
 input:focus
 {
-    background-color: white;
-    border-color: black;
+    background-color: var(--surface);
+    border-color: var(--primary);
 
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
     outline: none;
 }

@@ -1,12 +1,9 @@
-/*Estilizando footer*/
-
 footer
 {
     padding: 1rem 0;
 
-    background-color: black;
+    background-color: var(--primary-dark);
     color: white;
-
 }
 
 footer p

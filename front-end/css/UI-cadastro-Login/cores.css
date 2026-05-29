@@ -1,0 +1,26 @@
+:root {
+    /* Cores Principais */
+    --primary: #3B82F6;      /* Azul principal - botões, links */
+    --primary-dark: #1E40AF; /* Azul escuro */
+    --accent: #60A5FA;       /* Azul claro */
+
+    /* Fundo e Texto */
+    --background: #e4e7eb;   /* Fundo claro */
+    --surface: #FFFFFF;      /* Cards e superfícies */
+    --text-primary: #1E2937;
+    --text-secondary: #64748B;
+    
+    /* Outros úteis */
+    --border: #E2E8F0;
+    --success: #10B981;
+    --danger: #EF4444;
+}
+
+/* Se quiser Dark Mode no futuro */
+[data-theme="dark"] {
+    --background: #0F172A;
+    --surface: #1E2937;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --border: #334155;
+}
