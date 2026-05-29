@@ -1,0 +1,23 @@
+.about
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.textos p
+{
+    padding-bottom: 5px;
+    text-align: justify;
+}
+
+.textos
+{
+    max-width: 400px;
+    width: 100%;
+    padding: 1rem;
+}
