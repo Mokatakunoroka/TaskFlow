@@ -23,6 +23,7 @@ export function ValidarUsuario(emailDigitado, senha)
     throw new Error("Email ou senha inválidos")
 }
 
+//Essa função pega os valores dos inputs de Login
 export function PegarValores()
 {
     return{
@@ -31,12 +32,14 @@ export function PegarValores()
     }
 }
 
+//Essa função mostra as mensagens de erro no paragráfo com id msg-erro
 export function MostrarErro(mensagem)
 {
     const erro = document.getElementById("msg-erro");
     erro.textContent = mensagem;
 }
 
+//Ela ativa o usuário que está entrando.
 export function ativarUsuario(usuario, email)
 {
     usuario.forEach(element => {
