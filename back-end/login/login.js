@@ -1,5 +1,6 @@
-import { ValidarUsuario, PegarValores, MostrarErro } from "./help-login.js";
+import { ValidarUsuario, PegarValores, MostrarErro, ativarUsuario } from "./help-login.js";
 
+const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 const botaoLogin = document.getElementById("btn-login");
 
 botaoLogin.addEventListener("click", Login)
@@ -7,15 +8,19 @@ botaoLogin.addEventListener("click", Login)
 function Login(event)
 {
     event.preventDefault();
+
     const dados = PegarValores();
 
-    const usuarioValidado = ValidarUsuario(dados.email.trim(), dados.senha.trim());
-
-    if (usuarioValidado.ok)
+    try
     {
-        window.location.href = "../../front-end/pages/index.html"
-        return;
-    }
+        const usuarioValidado = ValidarUsuario(dados.email.trim(), dados.senha.trim());
 
-    MostrarErro(usuarioValidado.mensagem);
+        ativarUsuario(usuarios, dados.email);
+
+        window.location.href = "../../front-end/pages/index.html"
+    }
+    catch (erro)
+    {
+        MostrarErro(erro.message);
+    }
 }
