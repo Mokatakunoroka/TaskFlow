@@ -1,0 +1,33 @@
+/*Estilizando Titulo do dashboard*/
+.titulo
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+h1
+{
+    display: inline-block;
+    font-size: 1.7rem;
+}
+
+#btn-mostrar-modal
+{
+    padding: 0.5rem;
+
+    border: 1px solid var(--primary-dark);
+    border-radius: 4px;
+
+    background-color: var(--primary-dark);
+    color: var(--surface);
+    transition: 200ms;
+}
+
+#btn-mostrar-modal:hover
+{
+    transform: scale(1.05);
+    transition: 200ms;
+}

@@ -1,0 +1,85 @@
+@import url("../UI-cadastro-Login/input.css");
+#modal
+{
+    padding: 2%;
+
+    border: 1px solid var(--primary-dark);
+    border-radius: 5px;
+
+    box-shadow: 0 10px 10px rgb(139, 139, 139);
+
+    background-color: var(--primary-dark);
+
+    color: white;
+
+    justify-self: center;
+    align-self: center;
+}
+
+#modal label
+{
+    font-size: 1.1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header-modal, .modal-data-input
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+}
+
+form
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    
+    min-width: 300px;
+}
+
+#close-modal
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    padding: 0.2rem;
+    color: var(--danger);
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    background-color: transparent;
+}
+
+#close-modal:hover
+{
+    border: 1px solid var(--danger);
+    background-color: var(--danger);
+    color: white;
+}
+
+#salvar-info-modal
+{
+    align-self: center;
+
+    height: 25px;
+    width: 70px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    background-color: var(--primary);
+    box-shadow: 0px 2px 5px currentColor;
+
+    transition: 200ms;
+}
+
+#salvar-info-modal:hover
+{
+    transform: scale(1.05);
+
+    box-shadow: 0px 2px 8px currentColor;
+
+    transition: 200ms;
+}

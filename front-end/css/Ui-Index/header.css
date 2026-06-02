@@ -1,0 +1,63 @@
+
+/*Estilizando Header*/
+header
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--primary-dark);
+    padding: 1rem;
+}
+
+img
+{
+    width: 70px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 70px;
+}
+
+.header-logo
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    color: white;
+}
+
+.header-logo span
+{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+ul
+{
+    list-style: none;
+}
+
+#btn-sair
+{
+    background-color: transparent;
+
+    border: 0px solid transparent;
+    border-radius: 5px;
+
+    padding: 0.5rem;
+
+    color: red;
+
+    cursor: pointer;
+
+    transition: 200ms;
+}
+
+#btn-sair:hover
+{
+    border: 1px solid var(--danger);
+
+    background-color: var(--danger);
+    color: white;
+}

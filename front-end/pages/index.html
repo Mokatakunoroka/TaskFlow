@@ -29,12 +29,49 @@
                 Minhas tarefas
             </h1>
 
-            <button id="btn-adicionar">Adicionar</button>
+            <button id="btn-mostrar-modal" class="btn-modal">Adicionar</button>
         </div>
 
         <section>
             <div class="tarefas">
+                <dialog id="modal">
+                    <form>
+                        <div class="header-modal">
+                            <button type="button" id="close-modal" class="btn-modal">
+                                X
+                            </button>
 
+                            <div class="modal-data-input">
+                                <label for="nome-tarefa">
+                                    Nome
+                                </label>
+
+                                <input
+                                    type="text"
+                                    required
+                                    id="nome-tarefa"
+                                    placeholder="Digite o nome da tarefa"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="modal-data-input">
+                            <label for="objetivo-tarefa">
+                                Objetivo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="objetivo-tarefa"
+                                placeholder="Digite o objetivo da sua tarefa"
+                            >
+                        </div>
+                        
+                        <button id="salvar-info-modal" class="btn-modal">
+                            Concluído
+                        </button>
+                    </form>
+                </dialog>
             </div>
 
             <div class="card-relogio">
@@ -87,5 +124,7 @@
             
         </section>
     </main>
+
+    <script src="../../back-end/modal/funcionalidades.js"></script>
 </body>
 </html>
