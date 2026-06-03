@@ -1,22 +1,21 @@
 const botoesModais = document.querySelectorAll(".btn-modal");
+const modais = document.querySelectorAll(".modal");
 
-const modal = document.getElementById("modal");
-
-botoesModais.forEach(botao => 
+botoesModais.forEach(botao =>
 {
-    if (botao.getAttribute("id") == "btn-mostrar-modal")
+    if (botao.id === "btn-mostrar-modal")
     {
         botao.addEventListener("click", () =>
         {
-            modal.showModal();
+            document.getElementById("escolher-modal").showModal();
         });
     }
 
-    if (botao.getAttribute("id") == "close-modal")
+    if (["close-modal1", "close-modal2", "close-modal3"].includes(botao.id))
     {
-        botao.addEventListener("click", () => 
+        botao.addEventListener("click", () =>
         {
-            modal.close();
-        })
+            botao.closest("dialog").close();
+        });
     }
-})
+});

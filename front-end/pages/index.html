@@ -34,10 +34,63 @@
 
         <section>
             <div class="tarefas">
-                <dialog id="modal">
+                <dialog id="escolher-modal" class="modal">
+                    <div class="header-modal">
+                        <button type="button" id="close-modal1" class="btn-modal">
+                                X
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <select name="" id="">
+                            <option disabled>Selecione</option>
+                            <option>Hábito</option>
+                            <option>Tarefa</option>
+                        </select>
+
+                        <button id="continuar-modal" class="btn-modal">
+                            Continuar
+                        </button>
+                    </div>
+                </dialog>
+
+                <dialog id="modal-habito" class="modal">
+                    <div class="header-modal">
+                        <button type="button" id="close-modal2" class="btn-modal">
+                                X
+                        </button>
+
+                        <div class="modal-data-input">
+                            <label for="nome-tarefa">
+                                Nome
+                            </label>
+
+                            <input
+                                type="text"
+                                required
+                                id="nome-tarefa"
+                                placeholder="Digite o nome do habito..."
+                            >
+                        </div>
+                    </div>
+
+                    <div class="modal-data-input">
+                        <label for="objetivo-tarefa">
+                                Objetivo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="objetivo-tarefa"
+                            placeholder="O que te motivou a começar este hábito?"
+                        >
+                    </div>
+                </dialog>
+
+                <dialog id="modal-tarefa" class="modal">
                     <form>
                         <div class="header-modal">
-                            <button type="button" id="close-modal" class="btn-modal">
+                            <button type="button" id="close-modal3" class="btn-modal">
                                 X
                             </button>
 
@@ -50,7 +103,7 @@
                                     type="text"
                                     required
                                     id="nome-tarefa"
-                                    placeholder="Digite o nome da tarefa"
+                                    placeholder="Digite o nome da tarefa..."
                                 >
                             </div>
                         </div>
@@ -63,7 +116,7 @@
                             <input
                                 type="text"
                                 id="objetivo-tarefa"
-                                placeholder="Digite o objetivo da sua tarefa"
+                                placeholder="Digite o objetivo da sua tarefa..."
                             >
                         </div>
                         
