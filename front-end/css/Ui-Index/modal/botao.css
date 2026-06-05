@@ -22,17 +22,17 @@
 
 #salvar-habito
 {
-    border: 2px solid var(--success);
+    border: 2px solid var(--accent);
     border-radius: 5px;
 
     padding: 0.3rem;
-    background-color: var(--success);
+    background-color: var(--accent);
     transition: 200ms;
 }
 
 #salvar-habito:hover
 {
-    color: var(--success);
+    color: var(--accent);
     background-color: transparent;
     transition: 200ms;
 }

@@ -1,4 +1,4 @@
-.input-data label, .modal-data-input label
+.input-data label
 {
     display: block;
     font-size: 1.2rem;
@@ -14,18 +14,6 @@ input
     height: 1.2rem;
 }
 
-textarea
-{
-    width: minmax(70px, 90px);
-    height: minmax(70px, 90px);
-
-    resize: none; /*não deixa o usuário alterar o tamanho*/
-
-    border: 1px solid var(--border);
-    border-radius: 6px;
-
-    padding: 0.2rem;
-}
 
 input:focus, textarea:focus
 {
