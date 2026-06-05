@@ -29,37 +29,43 @@
                 Minhas tarefas
             </h1>
 
-            <button id="btn-mostrar-modal" class="btn-modal">Adicionar</button>
+            <button id="btn-mostrar-modal" class="btn-abrir-modal">Adicionar</button>
         </div>
 
         <section>
             <div class="tarefas">
                 <dialog id="escolher-modal" class="modal">
+
                     <div class="header-modal">
-                        <button type="button" id="close-modal1" class="btn-modal">
+                        <button type="button" class="btn-close-modal">
                                 X
                         </button>
                     </div>
 
                     <div class="modal-body">
-                        <select name="" id="">
-                            <option disabled>Selecione</option>
-                            <option>Hábito</option>
-                            <option>Tarefa</option>
+                        <select id="opcoes">
+                            <option value="" selected disabled>Selecione</option>
+                            <option value="modal-habito">Hábito</option>
+                            <option value="modal-tarefa">Tarefa</option>
                         </select>
+                    </div>
 
-                        <button id="continuar-modal" class="btn-modal">
+                    <div class="footer-modal">
+                        <button id="continuar-modal">
                             Continuar
                         </button>
                     </div>
                 </dialog>
 
                 <dialog id="modal-habito" class="modal">
+
                     <div class="header-modal">
-                        <button type="button" id="close-modal2" class="btn-modal">
+                        <button type="button" class="btn-close-modal">
                                 X
                         </button>
+                    </div>
 
+                    <div class="body-modal">
                         <div class="modal-data-input">
                             <label for="nome-tarefa">
                                 Nome
@@ -72,57 +78,30 @@
                                 placeholder="Digite o nome do habito..."
                             >
                         </div>
+
+                        <div class="modal-data-input">
+                            <label for="objetivo-tarefa">
+                                    Objetivo
+                            </label>
+
+                            <textarea
+                                id="objetivo-tarefa"
+                                placeholder="O que te motivou a começar..."
+                            ></textarea>
+                        </div>
                     </div>
 
-                    <div class="modal-data-input">
-                        <label for="objetivo-tarefa">
-                                Objetivo
-                        </label>
-
-                        <input
-                            type="text"
-                            id="objetivo-tarefa"
-                            placeholder="O que te motivou a começar este hábito?"
-                        >
+                    <div class="footer-modal">
+                        <button id="salvar-habito">
+                            Salvar
+                        </button>
                     </div>
+
                 </dialog>
 
                 <dialog id="modal-tarefa" class="modal">
                     <form>
-                        <div class="header-modal">
-                            <button type="button" id="close-modal3" class="btn-modal">
-                                X
-                            </button>
-
-                            <div class="modal-data-input">
-                                <label for="nome-tarefa">
-                                    Nome
-                                </label>
-
-                                <input
-                                    type="text"
-                                    required
-                                    id="nome-tarefa"
-                                    placeholder="Digite o nome da tarefa..."
-                                >
-                            </div>
-                        </div>
-
-                        <div class="modal-data-input">
-                            <label for="objetivo-tarefa">
-                                Objetivo
-                            </label>
-
-                            <input
-                                type="text"
-                                id="objetivo-tarefa"
-                                placeholder="Digite o objetivo da sua tarefa..."
-                            >
-                        </div>
                         
-                        <button id="salvar-info-modal" class="btn-modal">
-                            Concluído
-                        </button>
                     </form>
                 </dialog>
             </div>
@@ -183,6 +162,8 @@
             &copy; 2026 - Task Flow.
         </p>
     </footer>
-    <script src="../../back-end/modal/funcionalidades.js"></script>
+
+    <script src="../../back-end/modal/funcionalidades/abrir-fechar.js"></script>
+    <script src="../../back-end/modal/funcionalidades/trocar-modal.js"></script>
 </body>
 </html>

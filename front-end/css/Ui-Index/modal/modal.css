@@ -1,0 +1,38 @@
+@import url("../../UI-cadastro-Login/input.css");
+@import url("botao.css");
+
+.modal
+{
+    background-color: var(--primary-dark);
+
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+
+    margin: auto;
+    box-shadow: 0px 10px 10px currentColor;
+
+    padding: 2rem;
+}
+
+.header-modal
+{
+    position: absolute;
+    top: inherit;
+    right: inherit;
+}
+
+.body-modal
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 15px
+}
+
+.footer-modal
+{
+    justify-self: self-end;
+    align-self: self-end;
+
+    margin-top: 15px;
+}

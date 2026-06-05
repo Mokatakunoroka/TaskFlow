@@ -1,20 +1,33 @@
-.input-data label
+.input-data label, .modal-data-input label
 {
     display: block;
     font-size: 1.2rem;
-    color: var(--text-primary);
+    color: black;
+    margin-bottom: 2px;
 }
 
 input
 {   
     border: 1px solid var(--border);
     border-radius: 6px;
-
     padding: 0.7rem;
     height: 1.2rem;
 }
 
-input:focus
+textarea
+{
+    width: minmax(70px, 90px);
+    height: minmax(70px, 90px);
+
+    resize: none; /*não deixa o usuário alterar o tamanho*/
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    padding: 0.2rem;
+}
+
+input:focus, textarea:focus
 {
     background-color: var(--surface);
     border-color: var(--primary);
