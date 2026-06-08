@@ -1,0 +1,17 @@
+.btn-titulo
+{
+    padding: 0.5rem;
+
+    border: 1px solid var(--primary-dark);
+    border-radius: 4px;
+
+    background-color: var(--primary-dark);
+    color: var(--surface);
+    transition: 200ms;
+}
+
+.btn-titulo:hover
+{
+    transform: scale(1.05);
+    transition: 200ms;
+}
