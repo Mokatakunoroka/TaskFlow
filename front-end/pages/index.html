@@ -30,15 +30,18 @@
             </h1>
 
             <div class="botoes">
-                <button id="btn-mostrar-modal" class="btn-titulo">Adicionar</button>
-                <button id="btn-relatorio" class="btn-titulo">Gerar relatório</button>
+                <button id="btn-mostrar-modal" class="btn-titulo">
+                    Adicionar
+                </button>
+
+                <button id="btn-relatorio" class="btn-titulo">
+                    Gerar relatório
+                </button>
             </div>
         </div>
 
-        <section>
-            <div class="tarefas">
+        <article class="tarefas">
                 <dialog id="escolher-modal" class="modal">
-
                     <div class="header-modal">
                         <button type="button" class="btn-close-modal">
                                 X
@@ -61,55 +64,100 @@
                 </dialog>
 
                 <dialog id="modal-habito" class="modal">
-
-                    <div class="header-modal">
-                        <button type="button" class="btn-close-modal">
-                                X
-                        </button>
-                    </div>
-
-                    <div class="body-modal">
-                        <div class="modal-data-input">
-                            <label for="nome-tarefa">
-                                Nome
-                            </label>
-
-                            <input
-                                type="text"
-                                required
-                                id="nome-tarefa"
-                                placeholder="Digite o nome do habito..."
-                            >
+                        <div class="header-modal">
+                            <button type="button" class="btn-close-modal">
+                                    X
+                            </button>
                         </div>
 
-                        <div class="modal-data-input">
-                            <label for="objetivo-tarefa">
-                                    Objetivo
-                            </label>
+                        <div class="body-modal">
+                            <div class="modal-data-input">
+                                <label for="nome-habito">
+                                    Nome
+                                </label>
 
-                            <textarea
-                                id="objetivo-tarefa"
-                                placeholder="O que te motivou a começar..."
-                            ></textarea>
+                                <input
+                                    type="text"
+                                    id="nome-habito"
+                                    placeholder="Digite o nome do habito..."
+                                >
+                            </div>
+
+                            <div class="modal-data-input">
+                                <label for="objetivo-habito">
+                                        Objetivo
+                                </label>
+
+                                <textarea
+                                    id="objetivo-habito"
+                                    placeholder="O que te motivou a começar..."
+                                ></textarea>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="footer-modal">
-                        <button id="salvar-habito">
-                            Salvar
-                        </button>
-                    </div>
+                        <div class="footer-modal">
+                            <button id="salvar-habito" class="salvar-dialog">
+                                Salvar
+                            </button>
+                        </div>
 
                 </dialog>
 
                 <dialog id="modal-tarefa" class="modal">
-                    <form>
-                        
-                    </form>
-                </dialog>
-            </div>
+                    <div class="header-modal">
+                            <button type="button" class="btn-close-modal">
+                                    X
+                            </button>
+                        </div>
 
-            <div class="card-relogio">
+                        <div class="body-modal">
+                            <div class="modal-data-input">
+                                <label for="nome-tarefa">
+                                    Nome
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nome-tarefa"
+                                    placeholder="Digite o nome da tarefa..."
+                                >
+                            </div>
+
+                            <div class="modal-data-input">
+                                <label for="objetivo-tarefa">
+                                        Objetivo
+                                </label>
+
+                                <textarea
+                                    id="objetivo-tarefa"
+                                    placeholder="O que te motivou a começar..."
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div class="footer-modal">
+                            <button id="salvar-tarefa" class="salvar-dialog">
+                                Salvar
+                            </button>
+                        </div>
+                </dialog>    
+        </article>
+
+        <section class="conteudo-task" id="conteudo-task">
+            <article class="task-item">
+                <p>abrobrinha</p>
+            </article>
+
+            <article class="task-item">
+                <p>abrobrinha</p>
+            </article>
+
+            <article class="task-item">
+                <p>abrobrinha</p>
+            </article>
+        </section>
+
+        <div class="card-relogio" id="card-relogio">
                 <div class="relogio">
                     <svg 
                     fill="none"
@@ -153,11 +201,11 @@
                         </line>
                     </svg>
 
-                    <span>Ainda não foi adicionada nenhuma tarefa!</span>
+                    <span>
+                        Ainda não foi adicionada nenhuma tarefa!
+                    </span>
                 </div>
             </div>
-            
-        </section>
     </main>
 
     <footer>
@@ -166,7 +214,8 @@
         </p>
     </footer>
 
-    <script src="../../scripts/modal/funcionalidades/abrir-fechar.js"></script>
+    <script src="../../scripts/modal/funcionalidades/abrir-fechar.js" type="module"></script>
     <script src="../../scripts/modal/funcionalidades/trocar-modal.js"></script>
+    <script src="../../scripts/modal/adicionar-modal.js" type="module"></script>
 </body>
 </html>

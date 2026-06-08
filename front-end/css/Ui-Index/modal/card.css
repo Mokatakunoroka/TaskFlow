@@ -1,0 +1,8 @@
+.conteudo-task
+{
+    display: grid;
+    grid-template-columns: minmax(250px, repeat(3, 250px));
+    place-items: center center;
+}
+
+
