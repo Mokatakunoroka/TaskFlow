@@ -1,6 +1,6 @@
 
 /*Estilizando Header*/
-header
+.header-page
 {
     display: flex;
     flex-flow: row nowrap;

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <header>
+    <header class="header-page">
         <div class="header-logo">
             <img src="../../assets/img/Logo-TaskFlow.png" alt="logo">
             <span>Task Flow</span>
@@ -41,68 +41,6 @@
         </div>
 
         <article class="tarefas">
-                <dialog id="escolher-modal" class="modal">
-                    <div class="header-modal">
-                        <button type="button" class="btn-close-modal">
-                                X
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-                        <select id="opcoes">
-                            <option value="" selected disabled>Selecione</option>
-                            <option value="modal-habito">Hábito</option>
-                            <option value="modal-tarefa">Tarefa</option>
-                        </select>
-                    </div>
-
-                    <div class="footer-modal">
-                        <button id="continuar-modal">
-                            Continuar
-                        </button>
-                    </div>
-                </dialog>
-
-                <dialog id="modal-habito" class="modal">
-                        <div class="header-modal">
-                            <button type="button" class="btn-close-modal">
-                                    X
-                            </button>
-                        </div>
-
-                        <div class="body-modal">
-                            <div class="modal-data-input">
-                                <label for="nome-habito">
-                                    Nome
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="nome-habito"
-                                    placeholder="Digite o nome do habito..."
-                                >
-                            </div>
-
-                            <div class="modal-data-input">
-                                <label for="objetivo-habito">
-                                        Objetivo
-                                </label>
-
-                                <textarea
-                                    id="objetivo-habito"
-                                    placeholder="O que te motivou a começar..."
-                                ></textarea>
-                            </div>
-                        </div>
-
-                        <div class="footer-modal">
-                            <button id="salvar-habito" class="salvar-dialog">
-                                Salvar
-                            </button>
-                        </div>
-
-                </dialog>
-
                 <dialog id="modal-tarefa" class="modal">
                     <div class="header-modal">
                             <button type="button" class="btn-close-modal">
@@ -145,15 +83,26 @@
 
         <section class="conteudo-task" id="conteudo-task">
             <article class="task-item">
-                <p>abrobrinha</p>
-            </article>
+                <header class="header-task">
+                    <div class="info-geral">
+                        <span>Tarefa</span>
+                        <span>Pendente</span>
+                    </div>
 
-            <article class="task-item">
-                <p>abrobrinha</p>
-            </article>
+                    <button class="btn-fechar-card">x</button>
+                </header>
 
-            <article class="task-item">
-                <p>abrobrinha</p>
+                <div class="body-task">
+                    <h2>Nome</h2>
+
+                    <p>Descrição</p>
+                </div>
+
+                <footer class="footer-task">
+                    <button>
+                        Concluir
+                    </button>
+                </footer>
             </article>
         </section>
 
@@ -208,14 +157,13 @@
             </div>
     </main>
 
-    <footer>
+    <footer class="footer-page">
         <p>
             &copy; 2026 - TaskFlow
         </p>
     </footer>
 
     <script src="../../scripts/modal/funcionalidades/abrir-fechar.js" type="module"></script>
-    <script src="../../scripts/modal/funcionalidades/trocar-modal.js"></script>
     <script src="../../scripts/modal/adicionar-modal.js" type="module"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ const fecharModais = document.querySelectorAll(".btn-close-modal");
 
 abrirModal.addEventListener("click", () =>
 {
-    document.getElementById("escolher-modal").showModal();
+    document.getElementById("modal-tarefa").showModal();
 })
 
 
