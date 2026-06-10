@@ -15,7 +15,9 @@ botoes.forEach(botao =>
     botao.addEventListener("click", () =>
     {
         SumirRelogio();
+        
         const dados = input(botao);
+
         const idCard = SubirProLocalStorage(
             dados.nome,
             dados.descricao,
@@ -36,7 +38,7 @@ botoes.forEach(botao =>
     })
 })
 
-function CriarTask(idCard, nome, descricao, status, prazo)
+export function CriarTask(idCard, nome, descricao, status, prazo)
 {
     const containerTask = document.getElementById("conteudo-task");
 

@@ -8,22 +8,32 @@ document.addEventListener("click", (event) =>
     }
 
     const card = event.target.closest("article");
-    card.style.display = "none";
+    const usuarioAtivo = Number(idUser());
+    const idCard = Number(card.getAttribute("data-id"));
 
-    const cards = JSON.parse(
-        localStorage.getItem("cards")
-    ) || [];
+    if (!usuarioAtivo || !idCard)
+    {
+        return;
+    }
 
-    const cardUser = cards.find(
-        card => card.id == Number(idUser())
+    const excluiu = ExcluirCard(idCard, usuarioAtivo);
+
+    if (!excluiu)
+    {
+        return;
+    }
+
+    card.remove();
+
+    const cardsAtualizados = JSON.parse(localStorage.getItem("cards")) || [];
+    const cardUserAtualizado = cardsAtualizados.find(
+        card => card.id == usuarioAtivo
     );
 
-    if (cardUser.card.length <= 1)
+    if (!cardUserAtualizado || cardUserAtualizado.card.length === 0)
     {
         AparecerRelogio();
         SumirTask();
     }
-
-    ExcluirCard(Number(card.getAttribute("data-id")), Number(idUser()));
 
 })
