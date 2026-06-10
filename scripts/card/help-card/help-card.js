@@ -6,6 +6,12 @@ export function SumirRelogio()
     relogio.style.display = "none";
 }
 
+export function AparecerRelogio()
+{
+    const relogio = document.getElementById("card-relogio");
+    relogio.style.display = "flex";
+}
+
 export function AparecerTask()
 {
     const containerTask = document.getElementById("conteudo-task");
@@ -13,6 +19,11 @@ export function AparecerTask()
     containerTask.style.minHeight = "70vh";
 }
 
+export function SumirTask()
+{
+    const containerTask = document.getElementById("conteudo-task");
+    containerTask.style.display = "none";
+}
 export function EncurtarDescricao(descricao)
 {
     descricao = descricao.trim();
@@ -95,5 +106,28 @@ export function ConcluirCard(idCard, idUser)
         "cards",
         JSON.stringify(cards, null, 2)
     );
+
+}
+
+export function ExcluirCard(idCard, idUser)
+{
+    const cards = JSON.parse(
+        localStorage.getItem("cards")
+    ) || [];
+
+    const cardUser = cards.find(
+        card => card.id == idUser
+    );
+
+    if (!cardUser) return;
+
+    cardUser.card = cardUser.card.filter(
+        tarefa => tarefa.idCard != idCard
+    );
+
+    localStorage.setItem(
+        "cards",
+        JSON.stringify(cards, null, 2)
+        );
 
 }
