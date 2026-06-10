@@ -1,10 +1,11 @@
 .conteudo-task
 {
     display: none;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 25px
+    gap: 25px;
+    margin: 5px
 }
 
 .task-item
@@ -13,7 +14,7 @@
     flex-flow: column nowrap;
 
     height: 150px;
-    width: 250px;
+    width: 290px;
 
     border: 1px solid  #747474;
     border-radius: 5px;
@@ -92,6 +93,10 @@
 
 .body-task
 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -102,6 +107,7 @@
     font-size: large;
 }
 
+
 .body-task p
 {
     color: rgb(43, 43, 43)
@@ -109,9 +115,15 @@
 
 .footer-task
 {
-    margin-top: auto;
-    margin-left: auto;
+   margin-top: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
 }
+
 
 .concluir-tarefa
 {

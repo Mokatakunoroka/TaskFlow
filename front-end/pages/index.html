@@ -50,24 +50,34 @@
 
                         <div class="body-modal">
                             <div class="modal-data-input">
-                                <label for="nome-tarefa">
+                                <label for="nome_tarefa">
                                     Nome
                                 </label>
 
                                 <input
                                     type="text"
-                                    id="nome-tarefa"
+                                    id="nome_tarefa"
                                     placeholder="Digite o nome da tarefa..."
                                 >
                             </div>
 
                             <div class="modal-data-input">
-                                <label for="objetivo-tarefa">
-                                        Objetivo
+                                <Label for="prazo-tarefa">
+                                    Prazo
+                                </Label>
+
+                                <input 
+                                    type="date"
+                                    id="prazo-tarefa"
+                                >
+                            </div>
+                            <div class="modal-data-input">
+                                <label for="descricao_tarefa">
+                                        Descreva sua tarefa
                                 </label>
 
                                 <textarea
-                                    id="objetivo-tarefa"
+                                    id="descricao_tarefa"
                                     placeholder="O que te motivou a começar..."
                                 ></textarea>
                             </div>
@@ -82,28 +92,6 @@
         </article>
 
         <section class="conteudo-task" id="conteudo-task">
-            <article class="task-item">
-                <header class="header-task">
-                    <div class="info-geral">
-                        <span>Tarefa</span>
-                        <span class="status pendente">Pendente</span>
-                    </div>
-
-                    <button class="btn-fechar-card">x</button>
-                </header>
-
-                <div class="body-task">
-                    <h2>Nome</h2>
-
-                    <p>Descrição</p>
-                </div>
-
-                <footer class="footer-task">
-                    <button class="concluir-tarefa">
-                        CONCLUIR
-                    </button>
-                </footer>
-            </article>
         </section>
 
         <div class="card-relogio" id="card-relogio">
@@ -163,7 +151,7 @@
         </p>
     </footer>
 
-    <script src="../../scripts/modal/funcionalidades/abrir-fechar.js" type="module"></script>
-    <script src="../../scripts/modal/adicionar-modal.js" type="module"></script>
+    <script src="../../scripts/modal/abrir-fechar.js" type="module"></script>
+    <script src="../../scripts/card/adicionar-card.js" type="module"></script>
 </body>
 </html>

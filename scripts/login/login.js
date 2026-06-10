@@ -1,5 +1,10 @@
 //importa as funções de help-login
-import { ValidarUsuario, PegarValores, MostrarErro, ativarUsuario } from "./help-login.js";
+import { 
+    ValidarUsuario,
+    PegarValores,
+    MostrarErro,
+    ativarUsuario, 
+    desativarUsuarios} from "./help-login.js";
 
 //armazena o JSON em uma constante
 const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -25,6 +30,9 @@ function Login(event)
     {
         //uma função que valida o usuário, caso contrário ele lança um erro
         ValidarUsuario(dados.email.trim(), dados.senha.trim());
+
+        //Desativa todos os usuários
+        desativarUsuarios(usuarios);
 
         //Ativa o usuário
         ativarUsuario(usuarios, dados.email);

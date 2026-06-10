@@ -40,12 +40,32 @@ export function MostrarErro(mensagem)
 }
 
 //Ela ativa o usuário que está entrando.
-export function ativarUsuario(usuario, email)
+export function ativarUsuario(usuarios, email)
 {
-    usuario.forEach(element => {
+    usuarios.forEach(element => {
+        console.log(element, email)
         if (element.email === email)
         {
-            element.ativar = true;
+            element.ativo = true;
         }
     });
+
+    localStorage.setItem("usuarios", JSON.stringify(usuarios, null, 2));
+}
+
+//Essa função dessativa todos os usuários
+export function desativarUsuarios(usuarios)
+{
+    //percore cada dicionário individualmente dentro do array
+    usuarios.forEach(element => {
+        //verifica se a propriedade ativo do elemento é verdadeira
+        if (element.ativo)
+        {
+            //se sim, muda seu valor lógio para falso
+            element.ativo = false;
+        }
+    });
+
+    //salva as mudanças realizadas.
+    localStorage.setItem("usuarios", JSON.stringify(usuarios, null, 2))
 }

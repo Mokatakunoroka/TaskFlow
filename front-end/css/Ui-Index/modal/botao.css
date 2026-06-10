@@ -20,7 +20,7 @@
     background-color: var(--danger);
 }
 
-#salvar-habito
+#salvar-tarefa
 {
     border: 2px solid var(--accent);
     border-radius: 5px;
@@ -30,7 +30,7 @@
     transition: 200ms;
 }
 
-#salvar-habito:hover
+#salvar-tarefa:hover
 {
     color: var(--accent);
     background-color: transparent;
