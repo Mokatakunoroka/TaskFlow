@@ -20,4 +20,6 @@ document.addEventListener("click", (event) =>
     status.classList = "status concluido";
 
     ConcluirCard(Number(card.getAttribute("data-id")), Number(idUser()));
+
+    event.target.disable = true;
 })
