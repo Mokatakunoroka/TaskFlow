@@ -1,4 +1,4 @@
-const cards = JSON.parse(localStorage.getItem("cards")) || []
+const cards = JSON.parse(localStorage.getItem("cards")) || [];
 
 export function SumirRelogio()
 {
@@ -40,6 +40,7 @@ export function SubirProLocalStorage(nome, descricao, status, data)
             card: 
             [
                 {
+                    idCard: 1,
                     nome: nome,
                     descricao: descricao,
                     status: status,
@@ -50,10 +51,11 @@ export function SubirProLocalStorage(nome, descricao, status, data)
 
         cards.push(info);
         localStorage.setItem("cards", JSON.stringify(cards, null, 2));
-        return;
+        return 1;
     }
 
     tarefa.card.push({
+        idCard: tarefa.card.length + 1,
         nome: nome,
         descricao: descricao,
         status: status,
@@ -61,4 +63,37 @@ export function SubirProLocalStorage(nome, descricao, status, data)
     })
 
     localStorage.setItem("cards", JSON.stringify(cards, null, 2));
+
+    return tarefa.card.length;
+}
+export function idUser()
+{
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+     const user = usuarios.find(user => user.ativo);
+
+    return user.id;
+}
+
+export function ConcluirCard(idCard, idUser)
+{
+    const cards = JSON.parse(localStorage.getItem("cards") || "[]");
+
+    const cardUser = cards.find(card => card.id == idUser);
+
+    if (!cardUser) return;
+
+    const tarefa = cardUser.card.find(
+        tarefa => tarefa.idCard == idCard
+    );
+
+    if (!tarefa) return;
+
+    tarefa.status = "concluido";
+
+    localStorage.setItem(
+        "cards",
+        JSON.stringify(cards, null, 2)
+    );
+
 }
