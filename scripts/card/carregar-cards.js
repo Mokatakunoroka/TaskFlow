@@ -2,7 +2,9 @@ import
 { 
     idUser,
     SumirRelogio,
-    AparecerTask
+    AparecerTask,
+    AparecerRelogio,
+    SumirTask
 } from "./help-card/help-card.js";
 
 import { CriarTask } from "./adicionar-card.js"

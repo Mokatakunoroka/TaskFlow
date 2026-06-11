@@ -1,7 +1,16 @@
+.botoes
+{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    gap: 10px;
+}
+
 .btn-titulo
 {
     padding: 0.5rem;
 
+    width: 75px;
     border: 1px solid var(--primary-dark);
     border-radius: 4px;
 

@@ -1,0 +1,19 @@
+.filtro
+{
+    padding: 0.5rem;
+
+    height: 45px;
+    width: 130px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 4px;
+
+    background-color: var(--primary-dark);
+    color: var(--surface);
+    transition: 200ms;
+}
+
+.filtro:hover
+{
+    transform: scale(1.05);
+    transition: 200ms;
+}

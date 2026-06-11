@@ -5,11 +5,18 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 1rem;
-
 }
 
 h1
 {
     display: inline-block;
     font-size: 1.7rem;
+}
+
+.funcoes
+{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 30px;
 }
