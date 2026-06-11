@@ -7,20 +7,39 @@ import
 
 import { CriarTask } from "./adicionar-card.js"
 
-document.addEventListener("DOMContentLoaded", () =>
-{
-    const cards = JSON.parse(localStorage.getItem("cards")) || [];
-    const User = cards.find(card => card.id == Number(idUser()));
+document.addEventListener("DOMContentLoaded", carregarCards)
 
-    if (!User || User.card.length === 0)
+export function carregarCards(filtro = "todos") {
+    const container = document.getElementById("conteudo-task");
+    container.innerHTML = "";
+
+    const cards = JSON.parse(localStorage.getItem("cards")) || [];
+    const cardsUser = CardsUser(cards);
+
+    if (!cardsUser || cardsUser.length === 0) 
     {
+        AparecerRelogio();
+        SumirTask();
         return;
     }
 
-    const cardsUser = User.card;
+    let tarefasFiltradas = cardsUser;
 
-    cardsUser.forEach(card =>
+    if (filtro !== "todos")
     {
+        tarefasFiltradas = cardsUser.filter(tarefa =>
+        {
+            if ( filtro === "pendente"  ||
+                 filtro === "concluido" ||
+                 filtro === "atrasado" )
+            {
+                return tarefa.status === filtro;
+            }
+            return true;
+        });
+    }
+
+    tarefasFiltradas.forEach(card => {
         CriarTask(
             card.idCard,
             card.nome,
@@ -32,4 +51,9 @@ document.addEventListener("DOMContentLoaded", () =>
 
     SumirRelogio();
     AparecerTask();
-})
+}
+
+export function CardsUser(cards) {
+    const User = cards.find(card => card.id == Number(idUser()));
+    return User ? User.card : [];
+}

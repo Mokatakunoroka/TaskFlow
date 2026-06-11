@@ -14,7 +14,7 @@ export function AparecerTask()
 {
     const containerTask = document.getElementById("conteudo-task");
     containerTask.style.display = "flex";
-    containerTask.style.minHeight = "70vh";
+    containerTask.style.minHeight = "55vh";
 }
 
 export function SumirTask()

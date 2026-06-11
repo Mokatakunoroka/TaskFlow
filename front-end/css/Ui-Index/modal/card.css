@@ -39,7 +39,7 @@
 
 .info-geral span:first-child
 {
-    color: rgb(41, 98, 255);
+    color: rgb(3, 60, 219);
 
     padding: 0.3rem;
 
@@ -51,9 +51,9 @@
 
 .status.pendente
 {
-    color: rgb(133, 100, 4);
+    color: rgb(185, 173, 61);
     padding: 0.2rem;
-    background-color:  rgb(196, 185, 152);
+    background-color:  rgb(252, 251, 197);
     border-radius: 20px;
 }
 
@@ -67,9 +67,9 @@
 
 .status.atrasado
 {
-    color: rgb(255, 166, 0);
+    color: rgb(255, 2, 2);
     padding: 0.2rem;
-    background-color:  rgb(250, 213, 171);
+    background-color:  rgb(248, 182, 182);
     border-radius: 20px;
 }
 

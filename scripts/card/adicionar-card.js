@@ -44,7 +44,7 @@ export function CriarTask(idCard, nome, descricao, status, prazo)
 
     containerTask.insertAdjacentHTML("beforeend",
     `
-    <article class="task-item" data-id="${idCard}">
+    <article class="task-item" data-id="${idCard}" data-status="${status}">
         <header class="header-task">
             <div class="info-geral">
                 <span>Tarefa</span>
