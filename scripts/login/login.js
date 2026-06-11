@@ -46,3 +46,5 @@ function Login(event)
         MostrarErro(erro.message);
     }
 }
+
+desativarUsuarios(usuarios);
