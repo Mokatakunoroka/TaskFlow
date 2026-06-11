@@ -24,7 +24,7 @@ export function carregarCards(filtro = "todos") {
     //Se o usuário não tiver tarefa, mostra o card do relógio
     if (!cardsUser || cardsUser.length === 0) 
     {
-        AparecerRelogio();
+        AparecerRelogio(MensagemFiltroVazio(filtro));
         SumirTask();
         return;
     }
@@ -44,6 +44,14 @@ export function carregarCards(filtro = "todos") {
             }
             return true;
         });
+    }
+
+    //Se o filtro não encontrou nada, mostra uma mensagem personalizada
+    if (tarefasFiltradas.length === 0)
+    {
+        AparecerRelogio(MensagemFiltroVazio(filtro));
+        SumirTask();
+        return;
     }
 
     //Cria cada card filtrado novamente na tela
@@ -67,4 +75,25 @@ export function CardsUser(cards)
 {
     const User = cards.find(card => card.id == Number(idUser()));
     return User ? User.card : [];
+}
+
+//Define a mensagem do relógio de acordo com o filtro escolhido
+function MensagemFiltroVazio(filtro)
+{
+    if (filtro === "concluido")
+    {
+        return "Não tem nenhuma tarefa concluida.";
+    }
+
+    if (filtro === "pendente")
+    {
+        return "Não tem nenhuma tarefa pendente.";
+    }
+
+    if (filtro === "atrasado")
+    {
+        return "Não tem nenhuma tarefa atrasada.";
+    }
+
+    return "Ainda não foi adicionada nenhuma tarefa!";
 }

@@ -6,9 +6,12 @@ export function SumirRelogio()
 }
 
 //Mostra o relógio quando o usuário ainda não tem tarefas
-export function AparecerRelogio()
+export function AparecerRelogio(mensagem = "Ainda não foi adicionada nenhuma tarefa!")
 {
     const relogio = document.getElementById("card-relogio");
+    const textoRelogio = relogio.querySelector("span");
+
+    textoRelogio.textContent = mensagem;
     relogio.style.display = "flex";
 }
 
