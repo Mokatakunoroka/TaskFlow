@@ -13,6 +13,7 @@
 
 img
 {
+    /*Logo do cabeçalho*/
     width: 70px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 70px;
@@ -20,6 +21,7 @@ img
 
 .header-logo
 {
+    /*Agrupa logo e nome do projeto*/
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -35,11 +37,13 @@ img
 
 ul
 {
+    /*Remove o marcador padrão da lista do menu*/
     list-style: none;
 }
 
 #btn-sair
 {
+    /*Botão de sair da conta*/
     background-color: transparent;
 
     border: 0px solid transparent;

@@ -1,3 +1,4 @@
+/*Campo de descrição da tarefa*/
 textarea
 {
     
@@ -14,6 +15,7 @@ textarea
 
 .modal-data-input label
 {
+    /*Labels dos campos dentro do modal*/
     display: block;
     font-size: 1.2rem;
     color: white;

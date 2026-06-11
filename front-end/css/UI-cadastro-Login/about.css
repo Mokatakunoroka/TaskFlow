@@ -1,3 +1,4 @@
+/*Área de apresentação da TaskFlow*/
 .about
 {
     display: flex;
@@ -11,6 +12,7 @@
 
 .textos p
 {
+    /*Textos explicativos do projeto*/
     padding-bottom: 5px;
     text-align: justify;
 }
@@ -23,16 +25,19 @@
 }
 
 #sobre {
+    /*Mostra a seção sobre em telas maiores*/
     display: flex; 
 }
 
 @media (max-width: 768px) {
+    /*Em telas menores, deixa a tela focada no formulário*/
     #sobre {
         display: none !important;
     }
 }
 
 @media (min-width: 769px) {
+    /*Em telas maiores, volta a mostrar a explicação*/
     #sobre {
         display: flex !important;
     }

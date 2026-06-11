@@ -1,3 +1,4 @@
+/*Container onde os cards das tarefas aparecem*/
 .conteudo-task
 {
     display: none;
@@ -10,6 +11,7 @@
 
 .task-item
 {
+    /*Card de cada tarefa*/
     display: flex;
     flex-flow: column nowrap;
 
@@ -31,6 +33,7 @@
 }
 .header-task
 {
+    /*Topo do card com tipo, status e fechar*/
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -39,6 +42,7 @@
 
 .info-geral span:first-child
 {
+    /*Etiqueta padrão escrita "Tarefa"*/
     color: rgb(3, 60, 219);
 
     padding: 0.3rem;
@@ -51,6 +55,7 @@
 
 .status.pendente
 {
+    /*Status de tarefa pendente*/
     color: rgb(185, 173, 61);
     padding: 0.2rem;
     background-color:  rgb(252, 251, 197);
@@ -59,6 +64,7 @@
 
 .status.concluido
 {
+    /*Status de tarefa concluída*/
     color: rgb(14, 168, 40);
     padding: 0.2rem;
     background-color:  rgb(157, 233, 170);
@@ -67,6 +73,7 @@
 
 .status.atrasado
 {
+    /*Status de tarefa atrasada*/
     color: rgb(255, 2, 2);
     padding: 0.2rem;
     background-color:  rgb(248, 182, 182);
@@ -76,6 +83,7 @@
 
 .btn-fechar-card
 {
+    /*Botão que remove o card*/
     background-color: transparent;
     border: 1px solid transparent;
     padding: 0.1rem;
@@ -93,6 +101,7 @@
 
 .body-task
 {
+    /*Parte principal com nome e descrição*/
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -115,6 +124,7 @@
 
 .footer-task
 {
+   /*Rodapé do card com prazo e botão concluir*/
    margin-top: auto;
 
     display: flex;
@@ -127,6 +137,7 @@
 
 .concluir-tarefa
 {
+    /*Botão para concluir a tarefa*/
     background-color: var(--primary-dark);
 
     color: white;

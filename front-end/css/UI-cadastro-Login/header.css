@@ -1,3 +1,4 @@
+/*Cabeçalho das páginas de login e cadastro*/
 header
 {
     display: flex;
@@ -12,6 +13,7 @@ header
 
 img
 {
+    /*Logo do cabeçalho*/
     border: 1px solid black;
     border-radius: 50px;
     
@@ -28,6 +30,7 @@ img:hover
 
 ul
 {
+    /*Menu com os links do cabeçalho*/
     display: flex;
     flex-flow: row wrap;
     list-style: none;
@@ -43,6 +46,7 @@ li
 
 .info-header
 {
+    /*Links de navegação do cabeçalho*/
     display: inline-block;
     color: white;
     position: relative;

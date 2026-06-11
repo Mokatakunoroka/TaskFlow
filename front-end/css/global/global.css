@@ -1,3 +1,4 @@
+/*Reset básico da página*/
 *
 {
     margin: 0;
@@ -7,6 +8,7 @@
 
 body
 {
+    /*Mantém o layout ocupando a altura toda da tela*/
     background-color: var(--background);
     display: flex;
     flex-direction: column;
@@ -17,5 +19,6 @@ body
 
 html
 {
+    /*Deixa a navegação por links internos mais suave*/
     scroll-behavior: smooth;
 }

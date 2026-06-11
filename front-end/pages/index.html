@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
+    <!--Cabeçalho principal da página-->
     <header class="header-page">
         <div class="header-logo">
             <img src="../../assets/img/Logo-TaskFlow.png" alt="logo">
@@ -24,6 +25,7 @@
     </header>
 
     <main>
+        <!--Título e ações principais do dashboard-->
         <div class="titulo">
             <h1> 
                 Minhas tarefas
@@ -41,6 +43,7 @@
                 </div>
 
                 <div>
+                    <!--Filtro que muda quais tarefas aparecem-->
                     <select id="filtro-status" class="filtro">
                         <option value="" option disabled>FILTRO</option>
                         <option value="todos">Todas as tarefas</option>
@@ -52,6 +55,7 @@
             </div>
         </div>
 
+        <!--Modal usado para cadastrar uma nova tarefa-->
         <article class="tarefas">
                 <dialog id="modal-tarefa" class="modal">
                     <div class="header-modal">
@@ -104,9 +108,11 @@
                 </dialog>    
         </article>
 
+        <!--Aqui os cards das tarefas são inseridos pelo JavaScript-->
         <section class="conteudo-task" id="conteudo-task">
         </section>
 
+        <!--Mensagem que aparece quando ainda não existe nenhuma tarefa-->
         <div class="card-relogio" id="card-relogio">
             <div class="relogio">
                 <svg 
@@ -157,12 +163,14 @@
         </div>
     </main>
 
+    <!--Rodapé da aplicação-->
     <footer class="footer-page">
         <p>
             &copy; 2026 - TaskFlow
         </p>
     </footer>
 
+    <!--Scripts responsáveis pelas funções da página-->
     <script src="../../scripts/modal/abrir-fechar.js" type="module"></script>
     <script src="../../scripts/card/adicionar-card.js" type="module"></script>
     <script src="../../scripts/card/concluir-card.js" type="module"></script>

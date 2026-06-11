@@ -9,15 +9,19 @@ import
 
 import { CriarTask } from "./adicionar-card.js"
 
+//Assim que a página carregar, ele já puxa os cards salvos
 document.addEventListener("DOMContentLoaded", carregarCards)
 
+//Carrega os cards do usuário ativo e aplica o filtro escolhido
 export function carregarCards(filtro = "todos") {
     const container = document.getElementById("conteudo-task");
     container.innerHTML = "";
 
+    //Pega todos os cards salvos e separa só os cards do usuário atual
     const cards = JSON.parse(localStorage.getItem("cards")) || [];
     const cardsUser = CardsUser(cards);
 
+    //Se o usuário não tiver tarefa, mostra o card do relógio
     if (!cardsUser || cardsUser.length === 0) 
     {
         AparecerRelogio();
@@ -27,6 +31,7 @@ export function carregarCards(filtro = "todos") {
 
     let tarefasFiltradas = cardsUser;
 
+    //Quando não for "todos", deixa na tela apenas o status escolhido
     if (filtro !== "todos")
     {
         tarefasFiltradas = cardsUser.filter(tarefa =>
@@ -41,6 +46,7 @@ export function carregarCards(filtro = "todos") {
         });
     }
 
+    //Cria cada card filtrado novamente na tela
     tarefasFiltradas.forEach(card => 
     {
         CriarTask(
@@ -56,6 +62,7 @@ export function carregarCards(filtro = "todos") {
     AparecerTask();
 }
 
+//Procura no localStorage o grupo de cards que pertence ao usuário logado
 export function CardsUser(cards) 
 {
     const User = cards.find(card => card.id == Number(idUser()));

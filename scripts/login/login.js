@@ -47,4 +47,5 @@ function Login(event)
     }
 }
 
+//Garante que ninguem fique ativo antes de fazer um novo login
 desativarUsuarios(usuarios);

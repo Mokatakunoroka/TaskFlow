@@ -28,6 +28,7 @@ export function validarSenha(senha, cofirmSenha)
 //Uma função que retorna os valores dos inputs
 export function pegarValores()
 {
+    //Retorna tudo em um objeto para facilitar a validacao depois
     return {
         "email": document.getElementById("input-email-Cadastro").value,
         "senha": document.getElementById("password").value,

@@ -1,3 +1,4 @@
+/*Bloco que junta informações e formulário*/
 .informacoes
 {
     display: flex;
@@ -22,6 +23,7 @@
 
 .card
 {
+    /*Card principal dos formulários*/
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -36,6 +38,7 @@
 
 .cadastro
 {
+    /*Ajuste visual específico da tela de cadastro*/
     border: 1px solid var(--border);
     border-radius: 8px;
     background-color: var(--surface);

@@ -1,3 +1,4 @@
+/*Organiza os botões do título*/
 .botoes
 {
     display: flex;
@@ -8,6 +9,7 @@
 
 .btn-titulo
 {
+    /*Botões principais do dashboard*/
     padding: 0.5rem;
 
     width: 75px;
@@ -27,6 +29,7 @@
 
 #continuar-modal
 {
+    /*Botão usado dentro do fluxo do modal*/
     padding: 0.5rem;
     border: 1px solid white;
     border-radius: 5px;

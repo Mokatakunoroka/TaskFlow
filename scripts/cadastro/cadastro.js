@@ -38,6 +38,7 @@ function cadastrar(event)
         //Cria um objeto (dicionário) que recebe as informações do usuário
         const novoUsuario = 
         {
+            //Dados principais do novo usuario
             email: dados.email,
             senha: dados.senha,
             id: usuarios.length + 1,

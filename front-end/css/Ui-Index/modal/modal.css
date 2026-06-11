@@ -1,6 +1,7 @@
 @import url("../../UI-cadastro-Login/input.css");
 @import url("botao.css");
 
+/*Estilizando o modal de tarefas*/
 .modal
 {
     background-color: var(--primary-dark);
@@ -16,6 +17,7 @@
 
 .header-modal
 {
+    /*Deixa o botão de fechar no topo do modal*/
     position: absolute;
     top: inherit;
     right: inherit;
@@ -23,6 +25,7 @@
 
 .body-modal
 {
+    /*Organiza os campos do formulário do modal*/
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -31,6 +34,7 @@
 
 .footer-modal
 {
+    /*Alinha o botão de salvar no final*/
     justify-self: self-end;
     align-self: self-end;
 

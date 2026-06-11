@@ -1,6 +1,7 @@
 /*Estilizando Titulo do dashboard*/
 .titulo
 {
+    /*Alinha o título com os botões e o filtro*/
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -15,6 +16,7 @@ h1
 
 .funcoes
 {
+    /*Agrupa as ações do dashboard*/
     display: flex;
     flex-flow: row nowrap;
     align-items: center;

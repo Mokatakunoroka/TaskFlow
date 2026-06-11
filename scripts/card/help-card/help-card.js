@@ -1,15 +1,18 @@
+//Esconde o aviso do relógio quando existem tarefas na tela
 export function SumirRelogio()
 {
     const relogio = document.getElementById("card-relogio");
     relogio.style.display = "none";
 }
 
+//Mostra o relógio quando o usuário ainda não tem tarefas
 export function AparecerRelogio()
 {
     const relogio = document.getElementById("card-relogio");
     relogio.style.display = "flex";
 }
 
+//Mostra o container onde ficam os cards
 export function AparecerTask()
 {
     const containerTask = document.getElementById("conteudo-task");
@@ -17,11 +20,14 @@ export function AparecerTask()
     containerTask.style.minHeight = "55vh";
 }
 
+//Esconde o container das tarefas
 export function SumirTask()
 {
     const containerTask = document.getElementById("conteudo-task");
     containerTask.style.display = "none";
 }
+
+//Diminui descrições muito grandes para caber melhor no card
 export function EncurtarDescricao(descricao)
 {
     descricao = descricao.trim();
@@ -34,6 +40,7 @@ export function EncurtarDescricao(descricao)
     return descricao.slice(0, 30) + "...";
 }
 
+//Salva uma nova tarefa dentro do usuário ativo no localStorage
 export function SubirProLocalStorage(nome, descricao, status, data)
 {
     const usuarios = JSON.parse(localStorage.getItem("usuarios"));
@@ -42,6 +49,7 @@ export function SubirProLocalStorage(nome, descricao, status, data)
     const user = usuarios.find(usuario => usuario.ativo);
     const tarefa = cards.find(tarefa => tarefa.id == user.id);
 
+    //Se o usuário ainda não tem nenhuma tarefa, cria a primeira estrutura
     if (!tarefa)
     {
         const info = 
@@ -64,6 +72,7 @@ export function SubirProLocalStorage(nome, descricao, status, data)
         return 1;
     }
 
+    //Se já existe uma lista de tarefas, só adiciona a próxima
     const idCard = GerarProximoIdCard(tarefa.card);
 
     tarefa.card.push({
@@ -79,6 +88,7 @@ export function SubirProLocalStorage(nome, descricao, status, data)
     return idCard;
 }
 
+//Gera o próximo id com base no maior id que o usuário já tem
 function GerarProximoIdCard(cardsUsuario)
 {
     if (cardsUsuario.length === 0)
@@ -94,6 +104,7 @@ function GerarProximoIdCard(cardsUsuario)
     return Math.max(...maiorId) + 1;
 }
 
+//Retorna o id do usuário que está marcado como ativo
 export function idUser()
 {
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -105,6 +116,7 @@ export function idUser()
     return user.id;
 }
 
+//Marca uma tarefa como concluída dentro do localStorage
 export function ConcluirCard(idCard, idUser)
 {
     const cards = JSON.parse(localStorage.getItem("cards") || "[]");
@@ -128,6 +140,7 @@ export function ConcluirCard(idCard, idUser)
     localStorage.setItem("cards", JSON.stringify(cards, null, 2))
 }
 
+//Remove uma tarefa do usuário e informa se a exclusão aconteceu
 export function ExcluirCard(idCard, idUser)
 {
     const cards = JSON.parse(localStorage.getItem("cards")) || [];

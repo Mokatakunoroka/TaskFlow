@@ -1,3 +1,4 @@
+/*Labels dos campos dos formulários*/
 .input-data label
 {
     display: block;
@@ -8,6 +9,7 @@
 
 input
 {   
+    /*Campos de entrada dos formulários*/
     border: 1px solid var(--border);
     border-radius: 6px;
     padding: 0.7rem;
@@ -17,6 +19,7 @@ input
 
 input:focus, textarea:focus
 {
+    /*Destaque quando o usuário está digitando*/
     background-color: var(--surface);
     border-color: var(--primary);
 

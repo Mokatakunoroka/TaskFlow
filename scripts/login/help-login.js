@@ -1,4 +1,5 @@
 const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+//Lista de usuarios cadastrados que esta salva no navegador
 
 //Valida o usuário
 export function ValidarUsuario(emailDigitado, senha)
@@ -42,6 +43,7 @@ export function MostrarErro(mensagem)
 //Ela ativa o usuário que está entrando.
 export function ativarUsuario(usuarios, email)
 {
+    //percorre todos os usuarios ate achar o email que acabou de logar
     usuarios.forEach(element => {
         console.log(element, email)
         if (element.email === email)
