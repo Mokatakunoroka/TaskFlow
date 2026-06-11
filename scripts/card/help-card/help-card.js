@@ -34,15 +34,10 @@ export function EncurtarDescricao(descricao)
     return descricao.slice(0, 30) + "...";
 }
 
-function PegarCards()
-{
-    return JSON.parse(localStorage.getItem("cards")) || [];
-}
-
 export function SubirProLocalStorage(nome, descricao, status, data)
 {
     const usuarios = JSON.parse(localStorage.getItem("usuarios"));
-    const cards = PegarCards();
+    const cards = JSON.parse(localStorage.getItem("cards")) || [];
 
     const user = usuarios.find(usuario => usuario.ativo);
     const tarefa = cards.find(tarefa => tarefa.id == user.id);
@@ -114,11 +109,15 @@ export function ConcluirCard(idCard, idUser)
 {
     const cards = JSON.parse(localStorage.getItem("cards") || "[]");
 
+
     const cardUser = cards.find(card => card.id == idUser);
 
     if (!cardUser) return;
 
-    const tarefa = cardUser.card.find(
+
+    const tasksDoUsuario = cardUser.card;
+
+    const tarefa = tasksDoUsuario.find(
         tarefa => tarefa.idCard == idCard
     );
 
@@ -126,11 +125,7 @@ export function ConcluirCard(idCard, idUser)
 
     tarefa.status = "concluido";
 
-    localStorage.setItem(
-        "cards",
-        JSON.stringify(cards, null, 2)
-    );
-
+    localStorage.setItem("cards", JSON.stringify(cards, null, 2))
 }
 
 export function ExcluirCard(idCard, idUser)
@@ -145,7 +140,7 @@ export function ExcluirCard(idCard, idUser)
 
     cardUser.card = cardUser.card.filter(tarefa => tarefa.idCard != idCard);
 
-    localStorage.setItem("cards", JSON.stringify(cards, null, 2) );
+    localStorage.setItem("cards", JSON.stringify(cards, null, 2));
 
     return cardUser.card.length < quantidadeAntes;
 }

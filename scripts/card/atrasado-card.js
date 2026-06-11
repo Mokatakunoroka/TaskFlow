@@ -17,7 +17,7 @@ document.addEventListener("click", () =>
 
     cardsUser.forEach(card => 
     {
-        if (tarefaAtrasada(card) && card.status !== "atrasado")
+        if (tarefaAtrasada(card) && card.status == "pendente")
         {
             const tarefa = document.querySelector(`[data-id="${card.idCard}"]`);
             const span = tarefa.querySelector(".status");

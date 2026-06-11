@@ -13,13 +13,12 @@ document.addEventListener("click", (event) =>
     }
 
     const card = event.target.closest(".task-item");
-    const status = card.querySelectorAll("span")[1];
+    const statusSpan = card.querySelector('.status');
 
-    status.textContent = "concluido";
 
-    status.classList = "status concluido";
+    statusSpan.textContent = "concluido";
+    statusSpan.className = "status concluido";
 
-    ConcluirCard(Number(card.getAttribute("data-id")), Number(idUser()));
-
-    event.target.disable = true;
+    ConcluirCard(card.getAttribute("data-id"), idUser());
+    event.target.disabled = true;
 })
