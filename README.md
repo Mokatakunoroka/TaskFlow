@@ -9,7 +9,7 @@ O foco da aplicação é deixar o controle de tarefas mais direto, usando apenas
 
 ## Cadastro
 
-![Cadastro](./assets/screenshots/cadastro.png)
+![Cadastro](./assets/screenshots/Cadastro.png)
 
 ## Dashboard - sem tarefas
 
