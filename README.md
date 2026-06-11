@@ -100,10 +100,10 @@ Exemplo de armazenamento dos Usuários:
 
 ```json
 {
-  email:"usuario@gmail.com",
-  senha: "usuario",
-  id: 1,
-  ativo: true
+  "email":"usuario@gmail.com",
+  "senha": "usuario",
+  "id": 1,
+  "ativo": true
 }
 ```
 Exemplo de armazenamento dos cards:
