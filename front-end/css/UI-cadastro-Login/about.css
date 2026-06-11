@@ -1,7 +1,7 @@
 .about
 {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -20,4 +20,20 @@
     max-width: 400px;
     width: 100%;
     padding: 1rem;
+}
+
+#sobre {
+    display: flex; 
+}
+
+@media (max-width: 768px) {
+    #sobre {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    #sobre {
+        display: flex !important;
+    }
 }
