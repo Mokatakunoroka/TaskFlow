@@ -39,7 +39,8 @@ export function carregarCards(filtro = "todos") {
         });
     }
 
-    tarefasFiltradas.forEach(card => {
+    tarefasFiltradas.forEach(card => 
+    {
         CriarTask(
             card.idCard,
             card.nome,
@@ -53,7 +54,8 @@ export function carregarCards(filtro = "todos") {
     AparecerTask();
 }
 
-export function CardsUser(cards) {
+export function CardsUser(cards) 
+{
     const User = cards.find(card => card.id == Number(idUser()));
     return User ? User.card : [];
 }
